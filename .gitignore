@@ -1,6 +1,6 @@
 *.iml
-.gradle
-.idea
+.gradle/
+.idea/
 .scannerwork
 /local.properties
 /.idea/workspace.xml
@@ -8,7 +8,6 @@
 .DS_Store
 /build
 /captures
-
 /app/libs
 /app/build
 /app/debug
