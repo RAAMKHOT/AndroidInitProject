@@ -28,7 +28,7 @@
             android:screenOrientation="portrait"
             android:label="@string/lable_mainActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        
+
         <activity
             android:name="com.infinite.mysecurityfirst.ui.login.LoginActivity"
             android:screenOrientation="portrait"
