@@ -1,7 +1,4 @@
 *.iml
-.gradle/
-.idea/
-.scannerwork
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries
@@ -12,3 +9,5 @@
 /app/build
 /app/debug
 /app/release.DS_Store 
+/.gradle/
+/.idea/
