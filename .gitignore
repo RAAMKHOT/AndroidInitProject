@@ -1,2 +1,15 @@
-.idea/
-.gradle/
+*.iml
+.gradle
+.idea
+.scannerwork
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+
+/app/libs
+/app/build
+/app/debug
+/app/release.DS_Store 
