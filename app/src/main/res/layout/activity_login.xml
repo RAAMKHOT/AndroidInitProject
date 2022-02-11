@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.infinite.mysecurityfirst.ui.login.LoginActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.infinite.mysecurityfirst.ui.login.LoginViewModel" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cyan_dark">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="22dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/login_dummy"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/lato_bold"
+                        android:textSize="25sp" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="30dp"
+                        app:startIconDrawable="@drawable/ic_user_new"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_regular"
+                            android:inputType="text"
+                            android:maxLength="30"
+                            android:text=""
+                            android:textColor="@color/black_effective"
+                            android:textSize="18sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="15dp"
+                        app:passwordToggleEnabled="true"
+                        app:startIconDrawable="@drawable/ic_password"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_regular"
+                            android:inputType="textPassword"
+                            android:maxLength="30"
+                            android:text=""
+                            android:textColor="@color/black_effective"
+                            android:textSize="18sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnServerLogin"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="15dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:onClick="@{() -> viewModel.login()}"
+                        android:padding="10dp"
+                        android:text="@string/login"
+                        android:textSize="20sp"
+                        android:textAllCaps="false"
+                        app:cornerRadius="10dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/forgot_password"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/line_text"
+                        android:textAllCaps="false"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="20sp" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnGoogleLogin"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="15dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:padding="10dp"
+                        android:text="@string/google_text"
+                        android:textSize="20sp"
+                        app:strokeWidth="2dp"
+                        android:textAllCaps="false"
+                        app:cornerRadius="10dp" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnFacebookLogin"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="15dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:padding="10dp"
+                        android:text="@string/facebook_text"
+                        android:textSize="20sp"
+                        app:strokeWidth="2dp"
+                        android:textAllCaps="false"
+                        app:cornerRadius="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/register_text"
+                        android:textAllCaps="false"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</layout>
